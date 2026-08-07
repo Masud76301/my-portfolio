@@ -34,7 +34,7 @@ A modern, responsive, and interactive developer portfolio built with **Next.js**
 
 ### Icons
 - React Icons
-- Lucide React
+- Gravity Icons
 
 ### Deployment
 - Vercel
@@ -44,18 +44,47 @@ A modern, responsive, and interactive developer portfolio built with **Next.js**
 ## 📂 Folder Structure
 
 ```
-src/
-│
-├── app/
-│   ├── components/
-│   ├── data/
-│   ├── assets/
-│   ├── styles/
-│   └── page.jsx
+my-portfolio/
 │
 ├── public/
+│   ├── education/
+│   │   ├── hsc.png
+│   │   ├── iub.png
+│   │   └── ustc.png
+│   ├── projects/
+│   │   ├── keenkeeper.png
+│   │   ├── qurbanihat.png
+│   │   ├── reciperoom.png
+│   │   └── sportcove.png
+│   ├── khaled_photo.jpg
+│   └── profile_avatar.png
 │
-└── ...
+├── src/
+│   └── app/
+│       ├── component/
+│       │   ├── Projects/
+│       │   │   ├── Project.jsx        # Projects section
+│       │   │   ├── ProjectCard.jsx    # Individual project card
+│       │   │   └── projects.json      # Projects data
+│       │   ├── AboutMe.jsx            # About Me section
+│       │   ├── Contact.jsx            # Contact section
+│       │   ├── Education.jsx          # Education timeline
+│       │   ├── Footer.jsx             # Site footer
+│       │   ├── Hero.jsx               # Hero/landing section
+│       │   ├── Navbar.jsx             # Sticky navigation bar
+│       │   └── Skill.jsx              # Skills section
+│       ├── favicon.ico
+│       ├── globals.css
+│       ├── layout.js                  # Root layout
+│       └── page.js                    # Main page (assembles all sections)
+│
+├── .gitignore
+├── eslint.config.mjs
+├── jsconfig.json
+├── next.config.mjs
+├── package.json
+├── postcss.config.mjs
+└── README.md
 ```
 
 ---
@@ -65,13 +94,13 @@ src/
 ### Clone the repository
 
 ```bash
-git clone https://github.com/your-username/portfolio.git
+git clone https://github.com/Masud76301/my-portfolio.git
 ```
 
 ### Navigate to the project
 
 ```bash
-cd portfolio
+cd my-portfolio
 ```
 
 ### Install dependencies
@@ -129,16 +158,9 @@ The portfolio is fully responsive and optimized for:
 
 ## 🤝 Connect With Me
 
-- GitHub: https://github.com/your-username
-- LinkedIn: https://linkedin.com/in/your-profile
-- Facebook: https://facebook.com/your-profile
-- Email: your-email@example.com
-
----
-
-## 📄 License
-
-This project is licensed under the MIT License.
+- GitHub: https://github.com/Masud76301
+- LinkedIn: https://linkedin.com/in/khaledmasud76301
+- Email: khaledmasud76301@gmail.com
 
 ---
 
