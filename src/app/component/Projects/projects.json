@@ -1,0 +1,68 @@
+[
+    {
+        "id": 1,
+        "title": "RecipeRoom",
+        "image": "/projects/reciperoom.png",
+        "description": "A full-stack recipe sharing platform where users can create, discover, save, and manage recipes with authentication and responsive UI.",
+        "live": "https://recipe-room3.vercel.app/",
+        "github": "https://github.com/Masud76301/B13-A10-CLIENT",
+        "featured": true,
+        "technologies": [
+            "Next.js",
+            "Express.js",
+            "Node.js",
+            "JavaScript",
+            "Better Auth",
+            "Tailwind CSS",
+            "MongoDB"
+        ]
+    },
+    {
+        "id": 2,
+        "title": "SportCove",
+        "image": "/projects/sportcove.png",
+        "description": "A sports facility booking platform where users can reserve courts and owners can manage facilities with secure authentication.",
+        "live": "https://sportcoveclient.vercel.app/",
+        "github": "https://github.com/Masud76301/B13-A9-CLIENT",
+        "featured": true,
+        "technologies": [
+            "Next.js",
+            "Express.js",
+            "Node.js",
+            "JavaScript",
+            "Better Auth",
+            "Tailwind CSS",
+            "MongoDB"
+        ]
+    },
+    {
+        "id": 3,
+        "title": "QurbaniHat",
+        "image": "/projects/qurbanihat.png",
+        "description": "An online livestock marketplace where users can browse, book, and purchase certified Qurbani animals with doorstep delivery.",
+        "live": "https://b13-a8-beryl.vercel.app",
+        "github": "https://github.com/Masud76301/B13-A8",
+        "featured": false,
+        "technologies": [
+            "Next.js",
+            "JavaScript",
+            "Tailwind CSS"
+        ]
+    },
+    {
+        "id": 4,
+        "title": "KeenKeeper",
+        "image": "/projects/keenkeeper.png",
+        "description": "A friendship management application that helps users organize relationships, set reminders, and visualize communication habits.",
+        "live": "https://keen-keeper-five-roan.vercel.app/",
+        "github": "https://github.com/Masud76301/B13-A7",
+        "featured": false,
+        "technologies": [
+            "React",
+            "React Router",
+            "Tailwind CSS",
+            "DaisyUI",
+            "Recharts"
+        ]
+    }
+]

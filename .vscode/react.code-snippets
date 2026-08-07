@@ -1,0 +1,36 @@
+{
+  "React Stateless Component": {
+    "scope": "javascript,javascriptreact,typescriptreact",
+    "prefix": "rsc",
+    "body": [
+      "import React from 'react';",
+      "",
+      "const ${1:${TM_FILENAME_BASE}} = () => {",
+      "    return (",
+      "        <div>",
+      "            $0",
+      "        </div>",
+      "    );",
+      "};",
+      "",
+      "export default ${1:${TM_FILENAME_BASE}};"
+    ],
+    "description": "Creates a React Stateless Component"
+  },
+  "React Functional Component": {
+    "scope": "javascript,javascriptreact,typescriptreact",
+    "prefix": "rfc",
+    "body": [
+      "import React from 'react';",
+      "",
+      "export default function ${1:${TM_FILENAME_BASE}}() {",
+      "    return (",
+      "        <div>",
+      "            $0",
+      "        </div>",
+      "    );",
+      "}"
+    ],
+    "description": "Creates a React Functional Component"
+  }
+}
