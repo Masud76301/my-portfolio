@@ -68,6 +68,14 @@ export default function Navbar() {
     };
   }, []);
 
+  // Lock body scroll while mobile/tablet drawer is open
+  useEffect(() => {
+    document.body.style.overflow = mobileMenuOpen ? 'hidden' : '';
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [mobileMenuOpen]);
+
   // Smooth scroll handler with offset for sticky navbar
   const handleNavClick = (e, href) => {
     e.preventDefault();
@@ -105,7 +113,7 @@ export default function Navbar() {
           <a
             href="#hero"
             onClick={(e) => handleNavClick(e, '#hero')}
-            className="flex items-center gap-2 group cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-[#4ADE80] rounded-lg p-1"
+            className="flex items-center gap-2 group cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-[#4ADE80] rounded-lg p-1 shrink-0"
             aria-label="Khaled Masud Portfolio Home"
           >
             <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-[#111827] to-[#0B0B0B] border border-white/10 flex items-center justify-center group-hover:border-[#4ADE80]/50 transition-all duration-300 shadow-sm group-hover:shadow-[0_0_15px_rgba(74,222,128,0.2)]">
@@ -113,15 +121,15 @@ export default function Navbar() {
                 KM
               </span>
             </div>
-            <span className="font-bold text-lg tracking-tight text-white group-hover:text-[#4ADE80] transition-colors duration-300">
+            <span className="font-bold text-lg tracking-tight text-white group-hover:text-[#4ADE80] transition-colors duration-300 hidden sm:inline">
               Khaled Masud
             </span>
           </a>
 
-          {/* Desktop Navigation Links */}
+          {/* Desktop Navigation Links — only from lg up, where there's room for logo + 6 links + CTA */}
           <nav
             aria-label="Main Navigation"
-            className="hidden md:flex items-center space-x-1 lg:space-x-2 bg-[#111827]/60 border border-white/10 rounded-full px-4 py-1.5 backdrop-blur-md shadow-inner"
+            className="hidden lg:flex items-center space-x-1 xl:space-x-2 bg-[#111827]/60 border border-white/10 rounded-full px-4 py-1.5 backdrop-blur-md shadow-inner"
           >
             {NAV_ITEMS.map((item) => {
               const itemId = item.href.replace('#', '');
@@ -132,7 +140,7 @@ export default function Navbar() {
                   key={item.label}
                   href={item.href}
                   onClick={(e) => handleNavClick(e, item.href)}
-                  className={`relative px-3.5 py-1.5 text-sm transition-all duration-300 rounded-full focus:outline-none focus-visible:ring-2 focus-visible:ring-[#4ADE80] ${isActive
+                  className={`relative px-2.5 xl:px-3.5 py-1.5 text-sm whitespace-nowrap transition-all duration-300 rounded-full focus:outline-none focus-visible:ring-2 focus-visible:ring-[#4ADE80] ${isActive
                     ? 'text-[#4ADE80] font-semibold bg-[#4ADE80]/10 shadow-[0_0_12px_rgba(74,222,128,0.15)]'
                     : 'text-zinc-400 hover:text-white hover:scale-105'
                     }`}
@@ -148,8 +156,8 @@ export default function Navbar() {
             })}
           </nav>
 
-          {/* Desktop CTA Button */}
-          <div className="hidden md:flex items-center">
+          {/* Desktop CTA Button — matches nav breakpoint */}
+          <div className="hidden lg:flex items-center shrink-0">
             <a
               href="/resume.pdf"
               target="_blank"
@@ -162,8 +170,8 @@ export default function Navbar() {
             </a>
           </div>
 
-          {/* Mobile Menu Button */}
-          <div className="flex md:hidden items-center">
+          {/* Menu Button — now covers mobile AND tablet (below lg) */}
+          <div className="flex lg:hidden items-center">
             <button
               type="button"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -182,38 +190,41 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* Mobile Menu Drawer */}
+      {/* Mobile/Tablet Menu Drawer — shown below lg */}
       <div
         id="mobile-menu"
-        className={`md:hidden transition-all duration-300 ease-in-out overflow-hidden ${mobileMenuOpen
+        className={`lg:hidden transition-all duration-300 ease-in-out overflow-hidden ${mobileMenuOpen
           ? 'max-h-[500px] opacity-100 border-b border-white/10'
           : 'max-h-0 opacity-0 pointer-events-none'
           } bg-[#0B0B0B]/95 backdrop-blur-2xl`}
       >
-        <div className="px-4 pt-3 pb-6 space-y-1.5 sm:px-6">
-          {NAV_ITEMS.map((item) => {
-            const itemId = item.href.replace('#', '');
-            const isActive = activeSection === itemId;
+        {/* On tablet widths, lay items in a 2-column grid so the drawer isn't a tall single strip */}
+        <div className="px-4 pt-3 pb-6 sm:px-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-1.5 sm:gap-2">
+            {NAV_ITEMS.map((item) => {
+              const itemId = item.href.replace('#', '');
+              const isActive = activeSection === itemId;
 
-            return (
-              <a
-                key={item.label}
-                href={item.href}
-                onClick={(e) => handleNavClick(e, item.href)}
-                className={`flex items-center justify-between px-4 py-3 rounded-xl text-base transition-all duration-200 ${isActive
-                  ? 'text-[#4ADE80] font-semibold bg-[#4ADE80]/10 border border-[#4ADE80]/20 shadow-[0_0_10px_rgba(74,222,128,0.1)]'
-                  : 'text-zinc-300 hover:text-white hover:bg-white/5 border border-transparent'
-                  }`}
-              >
-                <span>{item.label}</span>
-                {isActive && (
-                  <span className="w-2 h-2 rounded-full bg-[#4ADE80] shadow-[0_0_8px_#4ADE80]"></span>
-                )}
-              </a>
-            );
-          })}
+              return (
+                <a
+                  key={item.label}
+                  href={item.href}
+                  onClick={(e) => handleNavClick(e, item.href)}
+                  className={`flex items-center justify-between px-4 py-3 rounded-xl text-base transition-all duration-200 ${isActive
+                    ? 'text-[#4ADE80] font-semibold bg-[#4ADE80]/10 border border-[#4ADE80]/20 shadow-[0_0_10px_rgba(74,222,128,0.1)]'
+                    : 'text-zinc-300 hover:text-white hover:bg-white/5 border border-transparent'
+                    }`}
+                >
+                  <span>{item.label}</span>
+                  {isActive && (
+                    <span className="w-2 h-2 rounded-full bg-[#4ADE80] shadow-[0_0_8px_#4ADE80]"></span>
+                  )}
+                </a>
+              );
+            })}
+          </div>
 
-          <div className="pt-4 mt-2 border-t border-white/10">
+          <div className="pt-4 mt-3 border-t border-white/10">
             <a
               href="/resume.pdf"
               target="_blank"
