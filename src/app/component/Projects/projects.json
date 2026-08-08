@@ -1,11 +1,11 @@
 [
     {
         "id": 1,
-        "title": "RecipeRoom",
+        "projectName": "RecipeRoom",
         "image": "/projects/reciperoom.png",
         "description": "A full-stack recipe sharing platform where users can create, discover, save, and manage recipes with authentication and responsive UI.",
-        "live": "https://recipe-room3.vercel.app/",
-        "github": "https://github.com/Masud76301/B13-A10-CLIENT",
+        "liveLink": "https://recipe-room3.vercel.app/",
+        "githubClient": "https://github.com/Masud76301/B13-A10-CLIENT",
         "featured": true,
         "technologies": [
             "Next.js",
@@ -15,15 +15,25 @@
             "Better Auth",
             "Tailwind CSS",
             "MongoDB"
+        ],
+        "challenges": [
+            "Implementing a secure and smooth authentication flow with Better Auth across protected and public routes.",
+            "Designing MongoDB schemas that efficiently support recipe creation, favorites, and search/filtering at scale.",
+            "Keeping the UI responsive and performant across a wide range of screen sizes."
+        ],
+        "futurePlans": [
+            "Introduce a premium subscription tier with exclusive recipe collections.",
+            "Add role-based access control for content moderation.",
+            "Integrate a rating and review system for recipes."
         ]
     },
     {
         "id": 2,
-        "title": "SportCove",
+        "projectName": "SportCove",
         "image": "/projects/sportcove.png",
         "description": "A sports facility booking platform where users can reserve courts and owners can manage facilities with secure authentication.",
-        "live": "https://sportcoveclient.vercel.app/",
-        "github": "https://github.com/Masud76301/B13-A9-CLIENT",
+        "liveLink": "https://sportcoveclient.vercel.app/",
+        "githubClient": "https://github.com/Masud76301/B13-A9-CLIENT",
         "featured": true,
         "technologies": [
             "Next.js",
@@ -33,29 +43,48 @@
             "Better Auth",
             "Tailwind CSS",
             "MongoDB"
+        ],
+        "challenges": [
+            "Building a booking system that prevents double-booking of the same court/time slot.",
+            "Separating permissions cleanly between regular users and facility owners.",
+            "Handling real-time availability updates without overcomplicating the data layer."
+        ],
+        "futurePlans": [
+            "Add online payment integration for bookings.",
+            "Build an owner-facing analytics dashboard.",
+            "Add email/SMS booking reminders and confirmations."
         ]
     },
     {
         "id": 3,
-        "title": "QurbaniHat",
+        "projectName": "QurbaniHat",
         "image": "/projects/qurbanihat.png",
         "description": "An online livestock marketplace where users can browse, book, and purchase certified Qurbani animals with doorstep delivery.",
-        "live": "https://b13-a8-beryl.vercel.app",
-        "github": "https://github.com/Masud76301/B13-A8",
+        "liveLink": "https://b13-a8-beryl.vercel.app",
+        "githubClient": "https://github.com/Masud76301/B13-A8",
         "featured": false,
         "technologies": [
             "Next.js",
             "JavaScript",
             "Tailwind CSS"
+        ],
+        "challenges": [
+            "Designing a clear, trustworthy browsing/filtering experience for livestock listings.",
+            "Structuring delivery and booking logic without a dedicated backend for this build."
+        ],
+        "futurePlans": [
+            "Add a proper backend with order tracking and delivery status updates.",
+            "Introduce seller verification badges for trust and safety.",
+            "Add secure online payment options."
         ]
     },
     {
         "id": 4,
-        "title": "KeenKeeper",
+        "projectName": "KeenKeeper",
         "image": "/projects/keenkeeper.png",
         "description": "A friendship management application that helps users organize relationships, set reminders, and visualize communication habits.",
-        "live": "https://keen-keeper-five-roan.vercel.app/",
-        "github": "https://github.com/Masud76301/B13-A7",
+        "liveLink": "https://keen-keeper-five-roan.vercel.app/",
+        "githubClient": "https://github.com/Masud76301/B13-A7",
         "featured": false,
         "technologies": [
             "React",
@@ -63,6 +92,15 @@
             "Tailwind CSS",
             "DaisyUI",
             "Recharts"
+        ],
+        "challenges": [
+            "Designing meaningful chart visualizations of communication habits using Recharts.",
+            "Building a reminder system that stays intuitive as the number of contacts grows."
+        ],
+        "futurePlans": [
+            "Add push/email notifications for upcoming reminders.",
+            "Sync with device contacts for faster setup.",
+            "Add a shared/collaborative mode for managing group relationships."
         ]
     }
 ]

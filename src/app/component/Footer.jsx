@@ -45,8 +45,8 @@ export default function Footer() {
                                 KM
                             </span>
                             <span className="text-white">
-                                Khaled
-                                <span className="text-emerald-400">.</span>
+                                Khaled Masud
+                                <span className="text-emerald-400"></span>
                             </span>
                         </Link>
 

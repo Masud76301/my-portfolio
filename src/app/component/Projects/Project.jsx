@@ -63,10 +63,10 @@ const Projects = ({ id = "projects" }) => {
                     </p>
                 </motion.div>
 
-                {/* Projects */}
-                <div className="space-y-40">
-                    {projects.map((project, index) => (
-                        <ProjectCard key={project.id} project={project} index={index} />
+                {/* Projects grid */}
+                <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+                    {projects.map((project) => (
+                        <ProjectCard key={project.id} project={project} />
                     ))}
                 </div>
 
