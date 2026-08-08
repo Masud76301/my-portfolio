@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { FiArrowUpRight } from "react-icons/fi";
 import ProjectCard from "./ProjectCard";
 import projects from "./projects.json";
 
@@ -71,50 +72,41 @@ const Projects = ({ id = "projects" }) => {
                 </div>
 
                 {/* Bottom CTA */}
+                {/* Bottom CTA */}
                 <motion.div
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true, amount: 0.6 }}
                     transition={{ duration: 0.5, ease: "easeOut" }}
-                    className="relative mt-32 overflow-hidden rounded-2xl border border-white/10 bg-white/5 px-6 py-16 text-center backdrop-blur-xl"
+                    className="mt-16 flex flex-col items-center justify-between gap-6 rounded-3xl border border-white/10 bg-white/5 px-8 py-10 backdrop-blur-xl sm:flex-row"
                 >
-                    <div
-                        className="pointer-events-none absolute inset-0 opacity-[0.08]"
-                        style={{
-                            backgroundImage:
-                                "radial-gradient(circle, rgba(255,255,255,0.5) 1px, transparent 1px)",
-                            backgroundSize: "24px 24px",
-                        }}
-                    />
-
-                    <div className="relative">
+                    <div className="text-center sm:text-left">
                         <span className="font-mono text-xs tracking-wide text-[#4ADE80]">
                             {"// more_on_github"}
                         </span>
-
-                        <h3 className="mt-3 text-3xl font-bold text-white">
+                        <h3 className="mt-2 text-2xl font-bold text-white">
                             Interested in seeing more?
                         </h3>
-
-                        <p className="mx-auto mt-4 max-w-md text-gray-400">
+                        <p className="mt-2 max-w-md text-sm text-gray-400">
                             Explore additional projects and open-source contributions on
                             GitHub.
                         </p>
-
-                        <motion.a
-                            href="https://github.com/Masud76301"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            whileHover={{
-                                scale: 1.05,
-                                boxShadow: "0 0 24px rgba(74,222,128,0.35)",
-                            }}
-                            whileTap={{ scale: 0.97 }}
-                            className="mt-8 inline-flex items-center rounded-full bg-[#4ADE80] px-8 py-4 font-semibold text-[#0B0B0B] transition-colors duration-300 hover:bg-[#6EE7A8]"
-                        >
-                            View My GitHub
-                        </motion.a>
                     </div>
+
+                    <motion.a
+                        href="https://github.com/Masud76301"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        whileHover={{
+                            scale: 1.05,
+                            boxShadow: "0 0 24px rgba(74,222,128,0.35)",
+                        }}
+                        whileTap={{ scale: 0.97 }}
+                        className="inline-flex shrink-0 items-center gap-2 rounded-full bg-[#4ADE80] px-6 py-3 font-semibold text-[#0B0B0B] transition-colors duration-300 hover:bg-[#6EE7A8]"
+                    >
+                        View My GitHub
+                        <FiArrowUpRight />
+                    </motion.a>
                 </motion.div>
             </div>
         </section>

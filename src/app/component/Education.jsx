@@ -68,15 +68,13 @@ export default function Education({ id = "education" }) {
                     </span>
 
                     <div className="mt-5 flex items-center gap-4">
-                        <div className="flex h-14 w-14 items-center justify-center rounded-xl border border-[#4ADE80]/30 bg-[#4ADE80]/10">
-                            <FaGraduationCap className="text-3xl text-[#4ADE80]" />
-                        </div>
+
 
                         <div>
                             <h2 className="text-4xl font-bold text-white md:text-5xl">
                                 Education
                             </h2>
-                            <p className="mt-1 text-gray-400">My academic journey</p>
+                            <p className="mt-1 text-center text-gray-400">My academic journey</p>
                         </div>
                     </div>
                 </motion.div>

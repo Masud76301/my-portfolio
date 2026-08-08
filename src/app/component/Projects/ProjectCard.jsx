@@ -28,7 +28,7 @@ const ProjectCard = ({ project }) => {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent opacity-0 group-hover:opacity-100 transition duration-500" />
 
                 {featured && (
-                    <span className="absolute left-4 top-4 rounded-full bg-cyan-500/20 px-4 py-1 text-xs font-semibold uppercase tracking-widest text-cyan-400 backdrop-blur-sm">
+                    <span className="absolute left-4 top-4 rounded-full bg-white px-4 py-1 text-xs font-semibold uppercase tracking-widest text-gray-600 backdrop-blur-sm">
                         Featured
                     </span>
                 )}
